@@ -92,10 +92,10 @@ fun Button.bindEnabled(
     })
 }
 
-fun Switch.bindChecked(
+fun CompoundButton.bindChecked(
     lifecycleOwner: LifecycleOwner,
     boolean: MutableLiveData<Boolean>?,
-    onStatusChange: ((Switch, Boolean) -> Unit)? = null
+    onStatusChange: ((CompoundButton, Boolean) -> Unit)? = null
 ) = boolean?.let {
     boolean.observe(lifecycleOwner, Observer { checked ->
         if (isChecked != checked) {
